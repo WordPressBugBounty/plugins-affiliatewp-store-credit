@@ -1,0 +1,1 @@
+# plugins-affiliatewp-store-credit
