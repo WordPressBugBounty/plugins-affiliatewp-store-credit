@@ -6,9 +6,9 @@ Author: ramiabraham
 Contributors: ryanduff, ramiabraham, mordauk, sumobi, patrickgarman, section214, drewapicture, tubiz, alexstandiford, aubreypwd
 Tags: affiliatewp, affiliates, store credit, woo, woocommerce, easy digital downloads, edd
 License: GPLv2 or later
-Tested up to: 6.6
+Tested up to: 6.6.2
 Requires PHP: 7.4
-Stable tag: 2.5.1
+Stable tag: 2.6.0
 Requires at least: 5.2
 
 == Description ==
@@ -69,6 +69,9 @@ A: Yes! There is an option that lets site admins enable that profile setting for
 
 
 == Changelog ==
+
+= Version 2.6.0, October 2, 2024 =
+* Improved: Store Credit is now more reliable with improved UI for increasing and decreasing store credit with logging
 
 = Version 2.5.1, July 18, 2024 =
 * Fixed: Store credit balance not showing when using WooCommerce checkout blocks

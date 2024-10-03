@@ -116,6 +116,26 @@ abstract class AffiliateWP_Store_Credit_Base {
 	}
 
 	/**
+	 * Add a payment to a referrer.
+	 *
+	 * @access protected
+	 * @since  Unknown
+	 *
+	 * @param  int $referral_id The Referral (ID).
+	 */
+	abstract protected function add_payment( $referral_id );
+
+	/**
+	 * Remove a payment from a referrer.
+	 *
+	 * @access protected
+	 * @since  Unknown
+	 *
+	 * @param int $referral_id The Referral (ID).
+	 */
+	abstract protected function remove_payment( $referral_id );
+
+	/**
 	 * Can the affiliate receive store credit?
 	 *
 	 * @since  2.3

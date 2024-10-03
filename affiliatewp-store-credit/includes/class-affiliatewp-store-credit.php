@@ -65,6 +65,15 @@ final class AffiliateWP_Store_Credit {
 	public $logs;
 
 	/**
+	 * Transactions DB
+	 *
+	 * @since 2.6.0
+	 *
+	 * @var \AffiliateWP\Addons\Store_Credit\Transactions\DB
+	 */
+	public $transactions;
+
+	/**
 	 * Main AffiliateWP_Store_Credit instance
 	 *
 	 * @since 2.0.0
@@ -191,6 +200,9 @@ final class AffiliateWP_Store_Credit {
 	 */
 	private function includes() {
 
+		// Database.
+		require_once AFFWP_SC_PLUGIN_DIR . 'includes/class-transactions.php';
+
 		// Functions.
 		require_once AFFWP_SC_PLUGIN_DIR . 'includes/functions.php';
 
@@ -232,6 +244,8 @@ final class AffiliateWP_Store_Credit {
 	 */
 	public function init() {
 		$this->debug = (bool) affiliate_wp()->settings->get( 'debug_mode', false );
+
+		$this->transactions = new \AffiliateWP\Addons\Store_Credit\Transactions();
 
 		if ( $this->debug ) {
 			$this->logs = new Affiliate_WP_Logging();
