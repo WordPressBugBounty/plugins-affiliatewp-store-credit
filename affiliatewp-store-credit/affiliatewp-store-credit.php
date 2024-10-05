@@ -6,7 +6,7 @@
  * Author: AffiliateWP
  * Author URI: https://affiliatewp.com
  * Contributors: ryanduff, ramiabraham, mordauk, sumobi, patrickgarman, section214, tubiz, paninapress, aubreypwd
- * Version: 2.6.0
+ * Version: 2.6.1
  * Text Domain: affiliatewp-store-credit
  *
  * AffiliateWP is distributed under the terms of the GNU General Public License as published by

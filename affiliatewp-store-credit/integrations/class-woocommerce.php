@@ -718,6 +718,8 @@ class AffiliateWP_Store_Credit_WooCommerce extends AffiliateWP_Store_Credit_Base
 	 * Update a Users' Store Credit.
 	 *
 	 * @since 2.6.0
+	 * @since AFFWPN Fixed issue (https://github.com/awesomemotive/affiliate-wp/issues/5329)
+	 *               where store credit was not updating.
 	 *
 	 * @param string $movement     Either `increase` to increase store credit by `$amount` or `decrease` to decrease by `$amount`.
 	 * @param float  $amount       The amount to increase/decrease the store credit by.
@@ -776,7 +778,7 @@ class AffiliateWP_Store_Credit_WooCommerce extends AffiliateWP_Store_Credit_Base
 			);
 		}
 
-		if ( ! is_a( affwp_get_affiliate( $for_user_id ), '\AffWP\Affiliate' ) ) {
+		if ( ! is_a( affwp_get_affiliate( affwp_get_affiliate_id( $for_user_id ) ), '\AffWP\Affiliate' ) ) {
 
 			return new WP_Error(
 				'user_not_affiliate',
