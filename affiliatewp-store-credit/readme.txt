@@ -6,9 +6,9 @@ Author: ramiabraham
 Contributors: ryanduff, ramiabraham, mordauk, sumobi, patrickgarman, section214, drewapicture, tubiz, alexstandiford, aubreypwd
 Tags: affiliatewp, affiliates, store credit, woo, woocommerce, easy digital downloads, edd
 License: GPLv2 or later
-Tested up to: 6.6.2
+Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 2.6.1
+Stable tag: 2.6.2
 Requires at least: 5.2
 
 == Description ==
@@ -69,6 +69,9 @@ A: Yes! There is an option that lets site admins enable that profile setting for
 
 
 == Changelog ==
+
+= Version 2.6.2, October 24, 2024 =
+* Fixed: Dropdown unusable in Google Chrome when adjusting affiliate's store credit
 
 = Version 2.6.1, October 4, 2024 =
 * Fixed: Store credit not updating for affiliates

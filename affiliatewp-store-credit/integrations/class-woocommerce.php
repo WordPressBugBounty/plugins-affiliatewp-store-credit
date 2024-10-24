@@ -718,7 +718,7 @@ class AffiliateWP_Store_Credit_WooCommerce extends AffiliateWP_Store_Credit_Base
 	 * Update a Users' Store Credit.
 	 *
 	 * @since 2.6.0
-	 * @since AFFWPN Fixed issue (https://github.com/awesomemotive/affiliate-wp/issues/5329)
+	 * @since 2.6.2 Fixed issue (https://github.com/awesomemotive/affiliate-wp/issues/5329)
 	 *               where store credit was not updating.
 	 *
 	 * @param string $movement     Either `increase` to increase store credit by `$amount` or `decrease` to decrease by `$amount`.

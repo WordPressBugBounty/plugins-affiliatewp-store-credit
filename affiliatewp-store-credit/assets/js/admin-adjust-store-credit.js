@@ -5,6 +5,9 @@
  * on the edit affiliates' screen.
  *
  * @since 2.6.0
+ * @since 2.6.2 Fix added where dropdown did not work properly in Google Chrome
+ *               when adjusting a new affiliate's store credit
+ *               See https://github.com/awesomemotive/affiliate-wp/issues/5330.
  *
  * @author Aubrey Portwood <aportwood@am.co>
  */
@@ -231,15 +234,7 @@
 										- parseFloat( $adjustment.val() )
 								);
 
-							const adjustmentWasEmpty = Number.isNaN( amount );
-
-							if ( adjustmentWasEmpty ) {
-
-								// Make sure the input reflects this immediately.
-								jQuery( 'input[name="store-credit-adjustment-value"] ', jQuery( '#store-credit-adjustments-modal' ) )
-									.val( '' )
-									.focus();
-							}
+							const adjustmentWasEmpty = Number.isNaN( amount ) || 'NaN' === amount;
 
 							if (
 
@@ -326,7 +321,7 @@
 								const adjustment = getAdjustment();
 								const movement = getMovement();
 
-								if ( parseFloat( adjustment ) === 0 ) {
+								if ( ( Number.isNaN( adjustment ) || 'NaN' === adjustment ) || parseFloat( adjustment ) === 0 ) {
 
 									// Focus on the adjustments input, they need to make an adjustment.
 									jQuery( 'input[name="store-credit-adjustment-value"] ', jQuery( '#store-credit-adjustments-modal' ) ).focus();
